@@ -1,0 +1,98 @@
+body {
+  overflow-x: hidden;
+  height: 200vh;
+  background-color: #ffffff;
+  font-family: "Gilroy", sans-serif;
+}
+
+.cursorDot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #a6ba00;
+  mix-blend-mode: difference;
+  position: absolute;
+  z-index: 1000;
+}
+
+.bar {
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.bar svg {
+  mix-blend-mode: difference;
+  fill: #a6ba00;
+}
+.bar .panelButton {
+  background-color: red;
+  border: none;
+  transition: 0.5s;
+}
+.bar .panelButton:hover {
+  background-color: blue;
+}
+
+.first {
+  transform: translate(0);
+}
+
+.second {
+  transform: translate(120%, 40%);
+}
+
+.third {
+  transform: translate(350%);
+}
+
+._4th {
+  transform: translate(590%, 150%);
+}
+
+._5th {
+  transform: translate(460%, 150%);
+}
+
+._6th {
+  transform: translate(360%, 10%);
+}
+
+.animated {
+  animation: move 20s linear;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(-200px);
+  }
+  100% {
+    transform: translate(-150vw);
+  }
+}
+.reset {
+  animation: reset 20s linear;
+}
+
+@keyframes reset {
+  0% {
+    transform: translate(calc(100vw + 40%));
+  }
+  100% {
+    transform: translate(-150vw);
+  }
+}
+.textContainer1 {
+  position: fixed;
+  mix-blend-mode: difference;
+  z-index: 500;
+}
+
+h1 {
+  width: fit-content;
+  z-index: 10;
+  font-size: 8em;
+  color: #a6ba00;
+  mix-blend-mode: difference;
+  transform: translate(200px, 100%);
+  margin: 0;
+}/*# sourceMappingURL=styles.css.map */
